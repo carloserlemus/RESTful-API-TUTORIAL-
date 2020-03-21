@@ -49,7 +49,29 @@ What We'll Build
 
 ----------------------------------------
 FILE STRUCTURE
+    /api 
+        All API related stuff (routes/models)
+        /routes
+            products.js
 
     /
         server.js
         app.js
+----------------------------------------
+
+----------------------------------------
+NOTES
+----------------------------------------
+
+app.use()
+    the use() methods SETS UP a middle ware.
+        Incoming Request goes through app.use
+        and whatever we pass through it.
+            We can pass a special function
+            (req, res, next)
+                request, response, and next.
+                next we use to move to the NEXT middleware.
+
+express.Router()
+    
+

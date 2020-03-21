@@ -75,6 +75,23 @@ app.use()
 express.Router()
 
 ERROR HANDLING
+    Install a Logging Package to display information about requests.
+
+    What happens when we call a url that has no route? We must handle this situation.
+
+======================================
+Parsing The Body and Handling CORS.
+==  ==  ==  ==  ==  ==  ==  ==  ==  ==
+
+Body-Parser
+    Parses BODY of incoming request.
+        Use that data.
+        import body-parser in the app.js
+    
+    app.use(bodyParser.urlencoded({extended: false}))
+    app.use(bodyParser.json());
+
+        These allow us to extract Json and urlencoded data.
 
 
 

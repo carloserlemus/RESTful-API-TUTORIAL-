@@ -1,0 +1,5 @@
+==NOTES==
+
+What is a RESTful API?
+
+What is it made up of?

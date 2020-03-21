@@ -1,5 +1,55 @@
 ==NOTES==
 
 What is a RESTful API?
+    Re-presentational State Transfer
+    Moving DATA around.
+----------------------------------------
 
-What is it made up of?
+    We have a server with urls supporting different types of http requests for the given urls
+    it boils down to exchanging data.
+
+----------------------------------------
+
+    RESTful -constraints- (Theoretical Boundaries of RESTful API)
+        Client-Server Architecture
+            - Keeping the backend and frontend architecture separate.
+        Stateless
+            -No client session stored on server.
+        Cacheability
+            - Responses DEFINED as cacheable or non-cacheable.
+        Layered System
+            - Middle men servers might be used without the user(client) knowing about it.
+        Uniform Interface
+            - Resources are id'd in requests. 
+            - Self desriptive messages and links to further resources.
+        Code on Demand
+            - Gives client back executable code.
+
+----------------------------------------
+----------------------------------------
+
+PROJECT SETUP
+
+----------------------------------------
+----------------------------------------
+
+What We'll Build
+
+* = authentication
+
+    Our API.
+        /products
+            GET | POST*
+        /product/{id}
+            GET | PATCH* | DELETE*
+        /orders
+            GET* | POST* 
+        /orders{id}
+            GET* | DELETE*
+
+----------------------------------------
+FILE STRUCTURE
+
+    /
+        server.js
+        app.js

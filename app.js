@@ -21,9 +21,18 @@ app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json());
 
-// test
-app.get('/user/:id', function (req, res, next) {
-    res.end(req.params.id)
+// CORS Handling
+app.use((req, res, next) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header(
+        "Acess-Control-Allow-Headers",
+        "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+    );
+    if (req.method === 'OPTIONS') {
+        res.header('Access-Control-Allow-Methods', 'PUT, POST, PATCH, DELETE, GET')
+        return res.status(200).json({})
+    }
+    next();
 })
 
 // use sets up a middleware.. and incoming request has to go through app.use

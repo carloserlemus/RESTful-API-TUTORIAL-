@@ -88,10 +88,20 @@ Body-Parser
         Use that data.
         import body-parser in the app.js
     
-    app.use(bodyParser.urlencoded({extended: false}))
-    app.use(bodyParser.json());
+    Doesn't support files but what it does support are:
+        url encoded bodies & json data
 
-        These allow us to extract Json and urlencoded data.
+To use Body-Parser: Import it.
+    When you use it you have to specify which kind of bodies you want to parse.
+        ex. app.use(bodyParser.urlencoded(_____))
+            we pass a js object into the urlencoded to CONFIGURE the parsing
 
+            app.use(bodyParser.urlencoded({
+                What is extended:?
+            }))
+
+            What are extended bodies?
+                WRT this, we set this to extended: false such that it
+                it only parses simple extended bodies.
 
 

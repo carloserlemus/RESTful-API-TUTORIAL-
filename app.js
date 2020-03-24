@@ -17,10 +17,14 @@ const morgan = require('morgan');
 const productRoutes = require('./api/routes/products');
 const orderRoutes = require('./api/routes/orders');
 
-// Why is it important to use() before the routes?
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json());
+
+// test
+app.get('/user/:id', function (req, res, next) {
+    res.end(req.params.id)
+})
 
 // use sets up a middleware.. and incoming request has to go through app.use
 // and whatever we pass to it.
